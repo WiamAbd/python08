@@ -2,7 +2,7 @@
 name = "matrix-project"
 version = "0.1.0"
 description = ""
-authors = ["you"]
+authors = ["wabdella"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
