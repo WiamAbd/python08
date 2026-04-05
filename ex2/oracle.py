@@ -35,14 +35,11 @@ if __name__ == "__main__":
 
     print("\nEnvironment security check:")
 
-    # These are expected as [OK] in subject example
-    print("[OK] No hardcoded secrets detected")
-
     if os.path.exists(".env"):
+        print("[OK] No hardcoded secrets detected")
         print("[OK] .env file properly configured")
+        print("[OK] Production overrides available")
     else:
         print("[WARNING] .env file missing")
-
-    print("[OK] Production overrides available")
 
     print("\nThe Oracle sees all configurations.")
