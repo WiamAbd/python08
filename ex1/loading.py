@@ -26,24 +26,23 @@ if __name__ == "__main__":
         print("pip install -r requirements.txt")
         print("or")
         print("poetry install")
-        return
+    else:
+        import matplotlib.pyplot as plt
 
-    import matplotlib.pyplot as plt
+        print("\nAnalyzing Matrix data...")
 
-    print("\nAnalyzing Matrix data...")
+        data = numpy.random.randn(1000)
 
-    data = numpy.random.randn(1000)
+        df = pandas.DataFrame(data, columns=["values"])
+        df["values"].mean()
+        df["values"].std()
 
-    df = pandas.DataFrame(data, columns=["values"])
-    df["values"].mean()
-    df["values"].std()
+        print("Processing 1000 data points...")
 
-    print("Processing 1000 data points...")
+        df["values"].plot()
+        plt.title("Matrix Data")
 
-    df["values"].plot()
-    plt.title("Matrix Data")
+        plt.savefig("matrix_analysis.png")
 
-    plt.savefig("matrix_analysis.png")
-
-    print("\nAnalysis complete!")
-    print("Results saved to: matrix_analysis.png")
+        print("\nAnalysis complete!")
+        print("Results saved to: matrix_analysis.png")
